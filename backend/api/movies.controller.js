@@ -1,4 +1,4 @@
-import MoviesDAO from "../dataAccessObject/moviesDAO";
+import MoviesDAO from "../dataAccessObject/moviesDAO.js";
 
 export default class MoviesController {
   static async apiGetMovies(req, res, next) {
@@ -29,6 +29,6 @@ export default class MoviesController {
       total_results: totalNumMovies,
     };
 
-    res.join(response);
+    res.json(response);
   }
 }
